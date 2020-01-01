@@ -1,0 +1,61 @@
+// Messages
+//
+// Show alert messages to users. You may add it to single elements like a `<p>`,
+// or to a parent if there are multiple elements to show.
+
+.message {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: #717171;
+  background-color: #f9f9f9;
+  
+@media (prefers-color-scheme: dark) {
+  color: #bababa;
+  background-color: #060606;
+  }
+}
+
+.danger {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $danger;
+}
+
+.success {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $success;
+}
+
+.info {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $info;
+}
+
+.warning {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $warning;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 27px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
