@@ -105,6 +105,11 @@ figure {
   margin: 0;
 }
 
+mark {
+    background: #fbe428;
+	padding: 2px 2px;
+}
+
 // Markdown footnotes
 //
 // See the example content post for an example.
@@ -116,6 +121,7 @@ a[href^="#fnref:"] {
   display: inline-block;
   margin-left: .1rem;
   font-weight: bold;
+  padding: 0.1em 0.1em 0.1em;
 }
 
 a.footnote:before {   
