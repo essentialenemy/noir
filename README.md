@@ -1,3 +1,7 @@
+### Demo
+
+You can see a live demo of Noir: [https://noir.essentialenemy.com](https://noir.essentialenemy.com)
+
 ### Installation
 
 First you will need to setup your Ruby environment and add the Jekyll and Bundler gems to it.
