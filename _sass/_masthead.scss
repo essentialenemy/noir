@@ -11,10 +11,10 @@
 .masthead-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: $gray-6;
+  color: $gray-4;
   
-@media (prefers-color-scheme: light) {
-  color: #515151;
+@media (prefers-color-scheme: dark) {
+  color: $gray-6;
   }
 
   a {

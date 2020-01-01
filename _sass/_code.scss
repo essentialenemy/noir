@@ -21,22 +21,21 @@ pre {
   
 .highlighter-rouge {
 	padding: 3px 4px;
-    border: 1px solid #1ba77e;
+    border: 1px solid $green;
     border-radius: 6px;
     background-color: #eee;
-    color: #1ba77e;
+    color: $green;
 	white-space: nowrap;
 	font-size: 85%;
 	
 @media (prefers-color-scheme: dark) {
     background-color: #202020;
-    color: #1ba77e;
 	}
 
 .highlight {
   padding: 1rem;
   margin-bottom: 1rem;
-  background-color: #f9f9f9;
+  background-color: $gray-1;
   border-radius: .25rem;
 
   pre {
