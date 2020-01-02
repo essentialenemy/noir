@@ -20,6 +20,7 @@
   padding: 12px;
   color: #fff;
   background-color: $danger;
+  border-left: .3rem solid #e31b0c;
 }
 
 .success {
@@ -27,6 +28,7 @@
   padding: 12px;
   color: #fff;
   background-color: $success;
+  border-left: .3rem solid #2e6b31;
 }
 
 .info {
@@ -34,6 +36,7 @@
   padding: 12px;
   color: #fff;
   background-color: $info;
+  border-left: .3rem solid #0a6dbc;
 }
 
 .warning {
@@ -41,6 +44,7 @@
   padding: 12px;
   color: #fff;
   background-color: $warning;
+  border-left: .3rem solid #c47500;
 }
 
 /* The close button */
