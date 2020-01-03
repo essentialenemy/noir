@@ -10,7 +10,7 @@ Detailed instructions for getting Ruby setup can be found [here](https://www.rub
 
 Once that’s done it’s time for the fun part. Don’t even bother with the `jekyll new site` command, I am going to provide a more foolproof way so that you don’t wind up in dependencies hell.
 
-1. Download the [zip archive](https://github.com/essentialenemy/noir/archive/master.zip) of this repository and copy the files into a new directory where you want your site’s configuration files to live.
+1. Download the latest [release](https://github.com/essentialenemy/noir/releases/) (**NOT** the ZIP archive of the latest commit made, the latest **release** asset) of this repository and copy the files into a new directory where you want your site’s configuration files to live.
 2. In your terminal or command prompt `cd` into the new directory you just made for those files.
 3. Run the command: `bundle install` as this will install all of the dependencies I have named in `Gemfile.lock`.
 4. Test that the site can be built with no issues, run the command: `bundle exec jekyll serve` and view the site by navigating to `127.0.0.1:4000` in your web browser.
