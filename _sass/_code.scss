@@ -1,24 +1,4 @@
-// Code
-//
-// Inline and block-level code snippets. Includes tweaks to syntax highlighted
-// snippets from Pygments/Rouge and Gist embeds.
-
-code,
-pre {
-  font-family: $code-font-family;
-}
-
-code {
-  font-size: 70%;
-}
-
-pre {
-  display: block;
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
-}
-  
+/* Applies to inline `code blocks` */
 .highlighter-rouge {
 	padding: 3px 4px;
     border: 1px solid $green;
@@ -26,47 +6,22 @@ pre {
     background-color: #eee;
     color: $green;
 	white-space: nowrap;
-	font-size: 85%;
 	
 @media (prefers-color-scheme: dark) {
     background-color: #202020;
 	}
-
-.highlight {
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: $gray-1;
-  border-radius: .25rem;
-
-  pre {
-    margin-bottom: 0;
-  }
 }
 
-  // Triple backticks (code fencing) doubles the .highlight elements
-  .highlight {
-    padding: 0;
-  }
-}
-
-.rouge-table {
-  margin-bottom: 0;
-  font-size: 100%;
-
-  &,
-  td,
-  th {
-    border: 0;
-  }
-
-  .gutter {
-    color: rgba(0,0,0,.25);
-    vertical-align: top;
-    // Make sure numbers aren't selectable
-    -webkit-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-  }
+/* Applies to all code blocks */
+pre, code {
+   font-family: $code-font-family;
+   font-size: 85%;
+   overflow: auto;
+   background-color: #body-bg;
+  
+@media (prefers-color-scheme: dark) {
+    background-color: $body-bg-dark;
+	}
 }
 
 // Gist via GitHub Pages
