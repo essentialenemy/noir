@@ -1,7 +1,4 @@
 // Pagination
-//
-// Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
-// there are no more previous or next posts to show.
 
 .pagination {
   overflow: hidden; // clearfix
@@ -28,10 +25,10 @@
 
 // Only provide a hover state for linked pagination items
 a.pagination-item:hover {
-  background-color: #f5f5f5;
+  background-color: #eee;
   
 @media (prefers-color-scheme: dark) {
-  background-color: #060606;
+  background-color: #1e1e1e;
   }
 }
 

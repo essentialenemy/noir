@@ -1,6 +1,4 @@
-// Body resets
-//
-// Update the foundational and global aspects of the page.
+// Body
 
 * {
   -webkit-box-sizing: border-box;
@@ -38,17 +36,26 @@ body {
 
 // No `:visited` state is required by default (browsers will use `a`)
 a {
-  color: $link-color;
+  color: $light;
   text-decoration: none;
 
   // `:focus` is linked to `:hover` for basic accessibility
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
+	color: $light;
+	
+	@media (prefers-color-scheme: dark) {
+    color: $dark;
+    }
   }
 
   strong {
     color: inherit;
+  }
+  
+@media (prefers-color-scheme: dark) {
+  color: $dark;
   }
 }
 
@@ -63,17 +70,21 @@ table {
   margin-bottom: 1rem;
   width: 100%;
   font-size: 85%;
-  border: 1px solid $border-color;
+  border: 1px solid #d4d4d4;
   border-collapse: collapse;
+  
+@media (prefers-color-scheme: dark) {
+  border: 1px solid #555555;
+  }
 }
 
 td,
 th {
   padding: .25rem .5rem;
-  border: 1px solid $border-color;
+  border: 1px solid #d4d4d4;
   
 @media (prefers-color-scheme: dark) {
-  border: 1px solid $gray-9;
+  border: 1px solid #555555;
   }
 }
 
@@ -83,7 +94,7 @@ th {
 
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
-  background-color: $gray-1;
+  background-color: #eee;
 
 @media (prefers-color-scheme: dark) {
   background-color: #2d2d2d;

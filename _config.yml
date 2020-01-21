@@ -14,6 +14,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-target-blank
 
 # Optimize Jekyll
 exclude:

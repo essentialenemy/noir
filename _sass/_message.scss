@@ -1,50 +1,73 @@
 // Messages
-//
-// Show alert messages to users. You may add it to single elements like a `<p>`,
-// or to a parent if there are multiple elements to show.
+
+// Example message box
+// <p class="message-yellow"><small><b>Warning!</b> This is a sentence inside of a message box.</small></p>
+
+// Example with close button
+// <p class="message-yellow"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+// <small><b>Warning!</b> This is a sentence inside of a message box.</small></p>
 
 .message {
-  margin-bottom: 1rem;
-  padding: 1rem;
-  color: #717171;
-  background-color: #f9f9f9;
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: #454545;
+  border-left: .3rem solid #bebebe;
+
   
 @media (prefers-color-scheme: dark) {
-  color: #bababa;
-  background-color: #1e1e1e;
+  color: #fff;
+  background-color: #282828;
+  border-left: .3rem solid #595959;
   }
 }
 
-.danger {
+.green {
   margin-bottom: 15px;
   padding: 12px;
   color: #fff;
-  background-color: $danger;
-  border-left: .3rem solid #e31b0c;
+  background-color: $message-green;
+  border-left: .3rem solid #93d080;
 }
 
-.success {
+.yellow {
   margin-bottom: 15px;
   padding: 12px;
   color: #fff;
-  background-color: $success;
-  border-left: .3rem solid #2e6b31;
+  background-color: $message-yellow;
+  border-left: .3rem solid #fdcb61;
 }
 
-.info {
+.orange {
   margin-bottom: 15px;
   padding: 12px;
   color: #fff;
-  background-color: $info;
-  border-left: .3rem solid #0a6dbc;
+  background-color: $message-orange;
+  border-left: .3rem solid #f9ac6b;
 }
 
-.warning {
+.red {
   margin-bottom: 15px;
   padding: 12px;
   color: #fff;
-  background-color: $warning;
-  border-left: .3rem solid #c47500;
+  background-color: $message-red;
+  border-left: .3rem solid #e86c71;
+}
+
+.purple {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-purple;
+  border-left: .3rem solid #bf61c0;
+}
+
+.blue {
+  margin-bottom: 15px;
+  padding: 12px;
+  color: #fff;
+  background-color: $message-blue;
+  border-left: .3rem solid #2bc2ff;
 }
 
 /* The close button */

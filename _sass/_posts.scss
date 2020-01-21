@@ -1,11 +1,70 @@
 // Posts and pages
-//
-// Each post is wrapped in `.post` and is used on default and post layouts. Each
-// page is wrapped in `.page` and is only used on the page layout.
+
+figure {
+    margin-right:   0;
+    margin-left:    0;
+    margin-top:     1.5em;
+    margin-bottom:  2em;
+    
+    & > :nth-last-child(2) {
+        margin-bottom: 0;
+        
+        & > :last-child {
+            margin-bottom: 0;
+        }
+    }
+    figcaption {
+        color: #878787;
+        margin-top: 1.3em;
+        font-size:  0.8em;
+    }
+    &.screenshot {
+        margin-left:    0;
+        margin-right:   0;
+        margin-top:     0;
+        
+        figcaption {
+            margin-top:     -1em;
+            margin-right:   2em;
+            margin-left:    2em;
+        }
+    }
+    &.attributed-quote {
+        margin-left:    0;
+        margin-right:   0;
+        
+        figcaption {
+            margin-top:     0.8em;
+            margin-left:    4em;
+            
+            p {
+                display: inline;
+            }
+            &::first-letter {
+                margin-left: -2.5ex;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 760px)  {
+    figure {
+        margin-left:    1em;
+        margin-right:   1em;
+    }
+}
+
+@media screen and (max-width: 500px)  {
+    figure.screenshot figcaption {
+        margin-top: 0;
+    }
+}
+
+// End of alterations for captions.
 
 .page,
 .post {
-  margin-bottom: 4em;
+  margin-bottom: 2em;
 
   li + li {
     margin-top: .25rem;
@@ -16,10 +75,10 @@
 .page-title,
 .post-title,
 .post-title a {
-  color: $gray-7;
+  color: $body-color;
   
 @media (prefers-color-scheme: dark) {
-  color: $gray-8;
+  color: $body-color-dark;
   }
 }
 
@@ -33,10 +92,23 @@
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  color: $gray-9;
+  opacity: .8;
+  color: $body-color;
   
 @media (prefers-color-scheme: dark) {
-  color: $gray-10;
+  color: $body-color-dark;
+  }
+}
+
+.permalink {
+  display: block;
+  font-size: 90%;
+  margin-top: -.9rem;
+  margin-bottom: 1.5rem;
+  color: $body-color;
+  
+@media (prefers-color-scheme: dark) {
+  color: $body-color-dark;
   }
 }
 
@@ -45,13 +117,33 @@
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid #d4d4d4;
+  border-bottom: 1px solid #d4d4d4;
   
 @media (prefers-color-scheme: dark) {
-  border-top: 1px solid #8e8e8e;
-  border-bottom: 1px solid #8e8e8e;
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
   }
+}
+
+.PageNavigation {
+  font-size: 18px;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.PageNavigation a {
+  display: inline;
+  width: auto;
+  float: left;
+  margin: 1em 0;
+}
+
+.PageNavigation .next {
+  float: right;
+  width: auto;
+  text-align: right;
 }
 
 .related-posts {
@@ -69,12 +161,16 @@
     }
 
     a:hover {
-      color: $green;
+      color: $light;
       text-decoration: none;
+	 
+    @media (prefers-color-scheme: dark) {
+	  color: $dark;
+      }
 
       small {
         color: inherit;
-      }
+	    }
     }
   }
 }
