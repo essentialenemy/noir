@@ -24,12 +24,12 @@ $code-brown:          #987654;
 $code-red:            #d65946;
 $code-dark-red:       #9d2512;
 
-$code-bg:             #1a1a1a;
+$code-bg:             rgba(36,37,43,1);
 $code-fg:             #bdbdb3;
 
 // Syntax highlighting styles
 
-.highlight .hll { background-color: $code-blue-bg; } /* Line highlight */
+.highlight .hll { background-color: $code-bg; } /* Line highlight */
 .highlight .lineno { color: $code-blue-gray; } /* Line numbers */
 // .highlight { background-color: $code-bg; color: $code-fg; }
 .highlight .c { color: $code-gray } /* Comment */

@@ -9,15 +9,40 @@ title: Home
 <h1 class="post-title">
 <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title | smartify }}</a>{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
 </h1>
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
 
-<h1 class="permalink">
+    {% if post %}
+    {% assign categories = post.categories %}
+  {% else %}
+    {% assign categories = page.categories %}
+  {% endif %}
+  {% for category in categories %}
+  in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+  </time>
+
+<span class="permalink">
 {% if post.link %}
 <a href="{{ post.url }}">Permalink</a>
 {% endif %}
-</h1>
+</span>
 
-    {{ post.content }}
+    {{ post.content | smartify }}
+	
+  <br>
+  <div class="tag-list">
+  {% if post %}
+  {% assign tags = post.tags %}
+  {% else %}
+  {% assign tags = page.tags %}
+  {% endif %}
+  {% for tag in tags %}
+  <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">#{{tag}}</a>
+  {% unless forloop.last %}&nbsp;{% endunless %}
+  {% endfor %}
+  </div>
+	
   </article>
   {% endfor %}
 </div>

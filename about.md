@@ -4,7 +4,7 @@ title: About
 ---
 
 <p class="message">
-  This page serves as an example which you can rename or delete as you see necessary. You could always include it in a navigation area as well.
+  You can rename or delete this example page as you see necessary.
 </p>
 
 ### What is Lorem Ipsum?

@@ -17,7 +17,7 @@
 
 /* Applies to all code */
 pre, code {
-    font-size: 13px;
+    font-size: 14px;
     font-family: $code-font-family;
     font-style: normal;
 
@@ -67,7 +67,7 @@ code.highlight {
 pre {
     border-radius: 5px;
     margin: 30px * 0.75 30px / 2;
-    padding: 8px 12px;
+    padding: 15px 17px;
     overflow-x: auto;
     background-color: #f1f1ff;
 
@@ -86,6 +86,8 @@ figure.highlight, div.highlight {
     pre {
         background-color: $code-bg;
 		border: 1px solid $code-light;
+	    border-radius: 15px;
+		box-shadow: 0 4px 30px rgba(0,0,0,.4);
 		
 		@media (prefers-color-scheme: dark) {
 		border: 1px solid $code-dark;
@@ -105,17 +107,17 @@ figure.highlight, div.highlight {
                 position: absolute;
                 right: 20px; // 15 + 5
 
-                font-size: 13px;
-                top: -11px;
-				padding: 0px 4px;
+                font-size: 16px;
+                top: -12px;
+				padding: 0px 7px;
 				text-transform: uppercase;
 				font-weight: bold;
 
                 border: 1px solid $code-light;
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
 
                 min-width: 30px;
                 text-align: center;

@@ -64,7 +64,7 @@ figure {
 
 .page,
 .post {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 
   li + li {
     margin-top: .25rem;
@@ -92,7 +92,6 @@ figure {
   display: block;
   margin-top: -.5rem;
   margin-bottom: 1rem;
-  opacity: .8;
   color: $body-color;
   
 @media (prefers-color-scheme: dark) {
@@ -110,6 +109,31 @@ figure {
 @media (prefers-color-scheme: dark) {
   color: $body-color-dark;
   }
+}
+
+.external-link {
+  display: block;
+  font-size: 90%;
+  margin-top: -.9rem;
+  margin-bottom: 1.5rem;
+  opacity: .5;
+  color: $body-color;
+
+@media (prefers-color-scheme: dark) {
+  color: $body-color-dark;
+  }
+}
+
+.tag-list {
+  padding-top: 0px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  border-radius: 5px;
+  color: $body-color;
+  
+  @media (prefers-color-scheme: dark) {
+	color: $code-dark;
+	}
 }
 
 // Related posts

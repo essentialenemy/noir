@@ -13,7 +13,7 @@ This is the font, size, color and spacing of regular ol' paragraph <p> text. Usi
 to make text *italic*, **bold** or ***bold and italic***.
 
 term
-: definition
+: *definition*
 
 If you want to reference a footnote it appears like this[^1] in a sentence.
 
