@@ -17,6 +17,11 @@ term
 
 If you want to reference a footnote it appears like this[^1] in a sentence.
 
+<figure>
+  <img src="/assets/test.png" alt="Testing">
+  <figcaption>Here is an image with a caption below it.</figcaption>
+</figure>
+
 Quotes look nice:
 
 >"My fellow Americans, we are and always will be a nation of immigrants. We were strangers once, too."

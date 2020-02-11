@@ -13,14 +13,18 @@ title: Home
 
     {% if post %}
     {% assign categories = post.categories %}
-  {% else %}
+    {% else %}
     {% assign categories = page.categories %}
-  {% endif %}
-  {% for category in categories %}
-  in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
-  {% endfor %}
-  </time>
+    {% endif %}
+    {% for category in categories %}
+    in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+    {% unless forloop.last %}&nbsp;{% endunless %}
+    {% endfor %}
+
+    {%- if post.last_modified_at -%}
+    <i>(Last updated: {{ post.last_modified_at | date_to_string }})</i>
+    {%- endif -%}
+    </time>
 
 <span class="permalink">
 {% if post.link %}

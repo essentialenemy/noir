@@ -21,6 +21,9 @@ layout: default
   in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %}
+  {%- if page.last_modified_at -%}
+  <i>(Last updated: {{ page.last_modified_at | date_to_string }})</i>
+  {%- endif -%}
   </time>{% if page.link %}<span class="external-link">External Link</span>{% endif %}
   
   {{ content | smartify }}
