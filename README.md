@@ -1,6 +1,35 @@
+Noir is a modern and customizable theme for Jekyll. Typography is paid close attention to and a dark mode friendly color scheme will be displayed automatically. It builds upon a standard Jekyll install in a number of ways.
+
 ### Demo
 
 You can see a live demo of Noir: [https://noir.essentialenemy.com](https://noir.essentialenemy.com)
+
+### Features
+
+HTML, SASS and Config files are included for the theme's design and functionality.
+
+A navigation area for linking to pages/posts or external URLs such as social media accounts.
+
+404, Archive, Category, Tag, Style and About pages.
+
+Pagination, related posts and per-post navigation to older/newer entries.
+
+HTML/CSS compression (minification).
+
+A favicon and valid Atom syndicated feed.
+
+Variables based accent color for the theme which can be changed easily.
+
+Fully responsive, with an emphasis on mobile friendly design and interaction.
+
+Enabled forced curly/smart quotes across all content with the `{ | smartify }` liquid filter.
+
+A wide variety of HTML elements commonly used in online Markdown writing (blockquotes, headers, tables, boxes/buttons, figure captions, code blocks, footnotes) have been styled.
+
+A single line added to a post's front matter can enable:
+- Adding a category or tags to a post.
+- The creation of *linked-list* style posts which link to external URLs, maintain a permalink and display a styled arrow to help indicate this.
+- Additional date line listing the last date a post was modified on.
 
 ### Installation
 

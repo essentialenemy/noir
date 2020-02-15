@@ -6,6 +6,7 @@
   padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .masthead-title {
@@ -13,6 +14,8 @@
   margin-bottom: 20px;
   color: $body-color;
   position: relative;
+  text-align: center;
+  padding-right: 12px;
   
 @media (prefers-color-scheme: dark) {
   color: $body-color-dark;
@@ -48,7 +51,7 @@ ul#navigation-list {
     display: inline;
     list-style: none;
 	padding-left: 0;
-    padding-right: 15px;
+    padding-right: 12px;
 	margin: 0;
     }
 }

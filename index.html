@@ -22,7 +22,7 @@ title: Home
     {% endfor %}
 
     {%- if post.last_modified_at -%}
-    <i>(Last updated: {{ post.last_modified_at | date_to_string }})</i>
+    <br><i>Last updated on: {{ post.last_modified_at | date_to_string }}</i>
     {%- endif -%}
     </time>
 

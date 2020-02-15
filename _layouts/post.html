@@ -13,16 +13,16 @@ layout: default
   
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}
   {% if post %}
-    {% assign categories = post.categories %}
+  {% assign categories = post.categories %}
   {% else %}
-    {% assign categories = page.categories %}
+  {% assign categories = page.categories %}
   {% endif %}
   {% for category in categories %}
   in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %}
   {%- if page.last_modified_at -%}
-  <i>(Last updated: {{ page.last_modified_at | date_to_string }})</i>
+  <br><i>Last updated on: {{ page.last_modified_at | date_to_string }}</i>
   {%- endif -%}
   </time>{% if page.link %}<span class="external-link">External Link</span>{% endif %}
   

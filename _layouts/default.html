@@ -13,7 +13,7 @@ layout: compress
       <header class="masthead">
 	  
         <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a><br>
           <small>{{ site.tagline }}</small>
         </h3>
 		
@@ -23,7 +23,6 @@ layout: compress
 		<li><a href="/archive/">archive</a></li>
 		<li><a href="/tags/">tags</a></li>
 		<li><a href="/categories/">categories</a></li>
-		<li><a href="/about/">about</a></li>
 		<li><a href="/styles/">styles</a></li>
 		</ul>
 		</div>
@@ -35,9 +34,8 @@ layout: compress
       </main>
 
       <footer class="footer">
-        <small>
-          Copyright &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>. Change this text in _layouts/default.html
-        </small>
+        <p><a href="https://github.com/essentialenemy/noir/">Noir</a> theme for <a href="https://jekyllrb.com/">Jekyll</a> by <a href="https://essentialenemy.com/">Victor Johnson</a>
+		<br><a href="https://github.com/essentialenemy/noir/blob/master/LICENSE.md">Released under MIT License</a></p>
       </footer>
     </div>
 
