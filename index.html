@@ -20,7 +20,6 @@ title: Home
     in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
     {% unless forloop.last %}&nbsp;{% endunless %}
     {% endfor %}
-
     {%- if post.last_modified_at -%}
     <br><i>Last updated on: {{ post.last_modified_at | date_to_string }}</i>
     {%- endif -%}
