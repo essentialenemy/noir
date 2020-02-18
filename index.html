@@ -9,8 +9,7 @@ title: Home
 <h1 class="post-title">
 <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title | smartify }}</a>{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
 </h1>
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}
-
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | {{ page.date | date_to_long_string: "ordinal", "US" }}
     {% if post %}
     {% assign categories = post.categories %}
     {% else %}
@@ -21,7 +20,7 @@ title: Home
     {% unless forloop.last %}&nbsp;{% endunless %}
     {% endfor %}
     {%- if post.last_modified_at -%}
-    <br><i>Last updated on: {{ post.last_modified_at | date_to_string }}</i>
+    <br><i>Last updated on: {{ post.last_modified_at | {{ page.date | date_to_long_string: "ordinal", "US" }}</i>
     {%- endif -%}
     </time>
 
@@ -50,16 +49,12 @@ title: Home
   {% endfor %}
 </div>
 
-<div class="pagination">
+<div class="PageNavigation">
   {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
+    <a class="prev" href="{{ paginator.next_page_path | prepend: site.baseurl }}">← Older</a>
   {% endif %}
   {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer</a>
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
+    <a class="next" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer →</a>
   {% endif %}
 </div>
 

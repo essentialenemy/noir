@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "noir-for-jekyll"
-  spec.version       = "1.5.0"
+  spec.version       = "1.6.0"
   spec.authors       = ["Victor Johnson"]
   spec.email         = ["me@essentialenemy.com"]
 
-  spec.summary       = "Noir. An automatic dark mode adaptation of the Poole theme for Jekyll."
+  spec.summary       = "Noir is a modern, responsive and customizable theme for Jekyll 4."
   spec.homepage      = "https://noir.essentialenemy.com"
   spec.license       = "MIT"
 

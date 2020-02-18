@@ -24,6 +24,8 @@ Fully responsive, with an emphasis on mobile friendly design and interaction.
 
 Enabled forced curly/smart quotes across all content with the `{ | smartify }` liquid filter.
 
+Rich preview links when shared via iMessage on iOS/macOS/watchOS.
+
 A wide variety of HTML elements commonly used in online Markdown writing (blockquotes, headers, tables, boxes/buttons, figure captions, code blocks, footnotes) have been styled.
 
 A single line added to a post's front matter can enable:
