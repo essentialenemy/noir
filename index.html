@@ -9,7 +9,7 @@ title: Home
 <h1 class="post-title">
 <a href="{% if post.link %}{{ post.link }}{% else %}{{ post.url }}{% endif %}">{{ post.title | smartify }}</a>{% if post.link %}<span class="link-arrow"> &rarr;</span>{% endif %}
 </h1>
-    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | {{ page.date | date_to_long_string: "ordinal", "US" }}
+    <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_long_string: "ordinal", "US" }}
     {% if post %}
     {% assign categories = post.categories %}
     {% else %}
@@ -20,7 +20,7 @@ title: Home
     {% unless forloop.last %}&nbsp;{% endunless %}
     {% endfor %}
     {%- if post.last_modified_at -%}
-    <br><i>Last updated on: {{ post.last_modified_at | {{ page.date | date_to_long_string: "ordinal", "US" }}</i>
+    <br><i>Last updated on: {{ post.last_modified_at | date_to_long_string: "ordinal", "US" }}</i>
     {%- endif -%}
     </time>
 

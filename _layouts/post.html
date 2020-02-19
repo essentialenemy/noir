@@ -22,7 +22,7 @@ layout: default
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %}
   {%- if page.last_modified_at -%}
-  <br><i>Last updated on: {{ page.last_modified_at | {{ page.date | date_to_long_string: "ordinal", "US" }}</i>
+  <br><i>Last updated on: {{ page.last_modified_at | date_to_long_string: "ordinal", "US" }}</i>
   {%- endif -%}
   </time>{% if page.link %}<span class="external-link">External Link</span>{% endif %}
   
@@ -60,7 +60,7 @@ layout: default
       <li>
         <a href="{{ site.baseurl }}{{ post.url }}">
           {{ post.title | smartify }}
-          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | {{ page.date | date_to_long_string: "ordinal", "US" }}</time></small>
+          <small><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_long_string: "ordinal", "US" }}</time></small>
         </a>
       </li>
     {% endfor %}
