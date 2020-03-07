@@ -9,7 +9,7 @@ layout: default
 </h1>
   {% else %}
 <h1 class="post-title">{{ page.title | smartify }}</h1>
-{% endif %
+{% endif %}
 
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_long_string: "ordinal", "US" }}
   {% if post %}
