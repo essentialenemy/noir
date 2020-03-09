@@ -3,13 +3,13 @@ layout: default
 ---
 
 <article class="post">
-<h1 class="post-title">{% if page.link %}
+{% if page.link %}
 <h1 class="post-title"><a href="{{ page.link }}">
   {{ page.title | smartify }} <span class="link-arrow">&rarr;</span></a>
 </h1>
   {% else %}
 <h1 class="post-title">{{ page.title | smartify }}</h1>
-  {% endif %}</h1>
+  {% endif %}
   
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_long_string: "ordinal", "US" }}
   {% if post %}
