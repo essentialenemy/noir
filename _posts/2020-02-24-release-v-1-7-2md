@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Release: v1.7.1"
+title: "Release: v1.7.2"
 date: 2020-02-24 06:20:45
 categories: [Announcements]
 tags: [releases]
-link: https://github.com/essentialenemy/noir/releases
-last_modified_at: 2019-02-25
+link: https://github.com/essentialenemy/noir/releases/tag/v1.7.2
+last_modified_at: 2019-04-20
 ---
 
 I will be creating new variations of this theme as sets of replacement SCSS files.
