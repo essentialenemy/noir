@@ -15,9 +15,9 @@ title: Home
     {% else %}
     {% assign categories = page.categories %}
     {% endif %}
+    {% if categories.size > 0 %}in{% endif %}
     {% for category in categories %}
-    in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-    {% unless forloop.last %}&nbsp;{% endunless %}
+    <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>{% unless forloop.last %},{% endunless %}
     {% endfor %}
     {%- if post.last_modified_at -%}
     <br><i>Last updated on: {{ post.last_modified_at | date_to_long_string: "ordinal", "US" }}</i>
@@ -31,7 +31,7 @@ title: Home
 </span>
 
     {{ post.content | smartify }}
-	
+
   <br>
   <div class="tag-list">
   {% if post %}
@@ -44,7 +44,7 @@ title: Home
   {% unless forloop.last %}&nbsp;{% endunless %}
   {% endfor %}
   </div>
-	
+
   </article>
   {% endfor %}
 </div>

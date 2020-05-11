@@ -10,24 +10,24 @@ layout: default
   {% else %}
 <h1 class="post-title">{{ page.title | smartify }}</h1>
   {% endif %}
-  
+
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_long_string: "ordinal", "US" }}
   {% if post %}
   {% assign categories = post.categories %}
   {% else %}
   {% assign categories = page.categories %}
   {% endif %}
+  {% if categories.size > 0 %}in{% endif %}
   {% for category in categories %}
-  in <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
-  {% unless forloop.last %}&nbsp;{% endunless %}
+  <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>{% unless forloop.last %},{% endunless %}
   {% endfor %}
   {%- if page.last_modified_at -%}
   <br><i>Last updated on: {{ page.last_modified_at | date_to_long_string: "ordinal", "US" }}</i>
   {%- endif -%}
   </time>{% if page.link %}<span class="external-link">External Link</span>{% endif %}
-  
+
   {{ content | smartify }}
-  
+
   <br>
   <div class="tag-list">
   {% if post %}
